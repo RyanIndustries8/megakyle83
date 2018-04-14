@@ -1,0 +1,71 @@
+@font-face {
+	font-family: "light";
+	src: url('assets/fonts/OpenSans-CondLight.woff');
+}
+
+@font-face {
+	font-family: "title";
+	src: url('assets/fonts/halfmoon_regular.ttf');
+}
+
+h1 {
+	font-family: inherit;
+	font-size: 28px;
+	font-weight: lighter;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-family: "title";
+	font-size: 22px;
+	text-transform: uppercase;
+}
+
+h3 {
+	font-family: inherit;
+	font-size: 28px;
+  font-weight: lighter;
+	letter-spacing: 1px;
+	line-height: 1.6;
+}
+
+h4 {
+	font-family: "title";
+	font-size: 12px;
+}
+
+p {
+	font-family: inherit;
+	font-size: 16px;
+	margin: 0;
+	line-height: 1.6;
+	letter-spacing: 0.5px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color: red;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background: rgb(250,250,250);
+	margin: 0;
+	font-family: "light", sans-serif;
+}
+
+canvas {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	z-index: 1;
+}
