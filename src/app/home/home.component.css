@@ -1,16 +1,161 @@
-section {
+.scifi {
+	background: rgb(0,0,0);
+	position: relative;
 	width: 100%;
-	height: 100vh;
+	bottom: 0;
+	right: 0;
+	height: calc(100vh - 75px);
+	margin-top: 75px;
+}
+
+.titleText {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	position: absolute;
+	z-index: 2;
+	color: rgb(255,255,255);
+	bottom: 100px;
+}
+
+.titleText div:first-child {
+	font-size: 64px;
+	letter-spacing: 1px;
+}
+
+.titleText div:nth-child(2) {
+	font-size: 48px;
+}
+
+.leanArrow {
+	display: none;
+	height: 45px;
+	position: relative;
+}
+
+.leanArrow,
+.leanArrow::before,
+.leanArrow::after {
+	background: rgba(255,255,255,.4);
+	width: 2px;
+}
+
+.leanArrow::before,
+.leanArrow::after {
+	content: '';
+	position: absolute;
+	height: 20px;
+}
+
+.leanArrow::before {
+	-webkit-transform: rotate(140deg);
+	transform: rotate(140deg);
+	bottom: -2px;
+	left: -7px;
+}
+
+.leanArrow::after {
+	-webkit-transform: rotate(-140deg);
+	transform: rotate(-140deg);
+	bottom: -2px;
+	right: -7px;
+}
+
+#scifiContainer {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	top: 0;
+	height: 100%;
+	overflow: hidden;
+}
+
+video {
+    position:absolute;
+    z-index:0;
+		height: 100vh;
+		overflow: hidden;
+		top: -30px;
+}
+video.fillWidth {
+    width: 100%;
+}
+
+#indexLayout {
+	display: flex;
+	flex-direction: row;
+}
+
+#animatedMenu {
+	position: fixed;
+	left: 0;
+	bottom: 50%;
+	opacity: 0;
+	transform: translateX(-30px);
+	transition: all .5s ease-in;
+}
+
+#animatedMenu.fade-in {
+	opacity: 1;
+	transform: translateX(0px);
+}
+
+.intro,
+.quote {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: all .4s ease-in;
+}
+
+.intro.fade-in,
+.quote.fade-in {
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+section {
+	width: calc(100% - 80px);
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding: 20px 40px;
+	/* margin-left: 100px; */
+}
+
+section:nth-child(odd) {
+	background-color: rgb(255,255,255);
 }
 
 section h3 {
   text-align: center;
 	padding: 0 40px 50px;
 	width: 75%;
+}
+
+.alley {
+	width: 100%;
+	height: 100%;
+	min-height: 100px;
+}
+
+#a {
+	background: url("/assets/img/View1.jpg");
+	background-size: cover;
+}
+
+#b {
+	background: url("/assets/img/magrot1.png");
+	background-size: cover;
+}
+
+#c {
+	background: url("/assets/img/tools1.png");
+	background-size: cover;
 }
 
 button {
@@ -21,6 +166,7 @@ button {
 	padding: 0 20px;
 	border: none;
 	cursor: pointer;
+	outline: unset;
 }
 
 button:before,
@@ -61,4 +207,113 @@ button:hover:after {
 	border-bottom: 1px solid black;
   border-top: 0px solid black !important;
 	border-right: 1px solid black;
+}
+
+button a,
+button a:hover,
+button a:active {
+	color: rgb(0,0,0);
+}
+
+.indexArrange {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+}
+
+.indexText {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.twitchImg {
+	height: 40vh;
+}
+
+.imageRow {
+  width: 100%;
+	display: flex;
+	flex-direction: row;
+	height: 20vw;
+	margin-bottom: 40px;
+	justify-content: space-between;
+}
+
+.imageRow div {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin: 0 20px;
+	align-items: center;
+}
+
+.imageRow div img {
+	width: 75%;
+	box-shadow: 8px 8px 4px 1px rgba(0,0,0,.5);
+}
+
+img {
+	opacity: 0;
+	transform: translateY(50px);
+	transition: all 1s ease-out;
+}
+
+img.fade-in {
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+.rightAligned {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-start;
+}
+
+@media screen and (max-width: 750px) {
+
+	section {
+		padding: 80px 20px;
+	}
+
+	.imageRow,
+	.rightAligned,
+	.indexArrange {
+		flex-direction: column;
+		height: auto;
+		align-items: center;
+	}
+
+	.imageRow {
+		margin-bottom: 20px;
+	}
+
+	.imageRow div {
+		width: 70%;
+		min-height: 20vw;
+	}
+
+	.twitchImg {
+    width: 40vh;
+		height: auto;
+	}
+
+	.twitchImg.mobile {
+		width: 55%;
+		margin-bottom: 30px;
+	}
+
+	.intro {
+		text-align: center;
+	}
+
+}
+
+@media screen and (min-width: 1450px) {
+
+	video {
+		height: 100vw;
+		top: -63px;
+	}
+
 }

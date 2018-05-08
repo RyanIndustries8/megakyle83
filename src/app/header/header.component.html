@@ -1,31 +1,27 @@
 <header>
   <div class="title">
-    <h1><a (click)="homePage()">{{title}}</a></h1>
+    <h1><a [routerLink]="['/']">{{title}}</a></h1>
   </div>
-  <div id="menuIcon"></div>
+  <div id="menuIcon">
+    <div class="bars"></div>
+  </div>
 </header>
 
 <menu>
   <ul>
-    <li>
-      <h3><a (click)="homePage()">HOME</a></h3>
-    </li>
-    <li>
-      <h3><a (click)="workPage()">WORK</a></h3>
-    </li>
-    <li>
-      <h3><a (click)="aboutPage()">ABOUT</a></h3>
+    <li *ngFor="let page of linkingPgs">
+      <h3><a [routerLink]="(page.link)">{{page.pgTitle}}</a></h3>
     </li>
   </ul>
-  <div class="contactCont">
-  <h2>Contact</h2>
-  <p>megakyle83@hotmail.com</p>
-  <p>(541)786-9549</p>
-  <footer>
-  <div class="social" *ngFor="let social of socialmedia">
-    <span class="platform">{{social.platform}}</span>
-    <a class="icon" [routerLink]=""><img [src]="social.icon"></a>
-  </div>
-</footer>
+  <div class="contactCont" *ngFor="let contact of contactMe">
+    <h2>{{contact.title}}</h2>
+    <p>{{contact.email}}</p>
+    <p>{{contact.phone}}</p>
+    <footer>
+    <div class="social" *ngFor="let social of socialmedia">
+      <span class="platform">{{social.platform}}</span>
+      <a class="icon" target="_blank" href={{social.site}}><img [src]="social.icon" /></a>
+    </div>
+  </footer>
 </div>
 </menu>

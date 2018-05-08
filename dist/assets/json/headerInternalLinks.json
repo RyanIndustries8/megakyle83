@@ -1,0 +1,14 @@
+[
+  {
+    "link": "/",
+    "pgTitle": "HOME"
+  },
+  {
+    "link": "/work",
+    "pgTitle": "WORK"
+  },
+  {
+    "link": "/about",
+    "pgTitle": "ABOUT"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  { 
+    "title": "FOCUS",
+    "skills": [
+      {"prog": "Maya"},
+      {"prog": "ZBrush"},
+      {"prog": "Substance Painter"},
+      {"prog": "Marmoset Toolbag"},
+      {"prog": "Photoshop"},
+      {"prog": "Unreal"},
+      {"prog": "Unity"}
+    ]
+  },
+  {
+    "title": "CAPABLE",
+    "skills": [
+      {"prog": "Illustrator"},
+      {"prog": "JavaScript"},
+      {"prog": "C#"},
+      {"prog": "After Effects"}
+    ]
+  },
+  {
+    "title": "RESUME",
+    "skills": [
+      {"link": "https://drive.google.com/open?id=1l32N4Bfgnc9RWZ4K5Z1uQMlHLSJU7wZN",
+        "type": "PDF"},
+      {"link": "https://drive.google.com/open?id=1CTdkIos4AZBTEZKcSrEJI7ko6ngSbzDAm8kTGRY4nMI",
+        "type": "DOCX"}
+    ]
+  }
+]

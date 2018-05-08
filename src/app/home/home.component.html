@@ -1,24 +1,61 @@
 <app-header></app-header>
-<section>
-	<h2>Who I Am</h2>
-	<h3>I'm Kyle! A 3D modeler with a passion for making beautiful environments, redesigning classic characters, and mastering all things 3D. As a graduate from Full Sail University I am looking to partner with the right company to bring the creative imagination to life using tools like Autodesk Maya, Pixologic ZBrush, Allegorithmic Substance Designer/Painter, Unity3D, Epic's Unreal Engine 4, Marmoset, and Adobe Photoshop to just name a few. I want to bring new adventures to audiences all over the world. Lets make it happen!</h3>
-  <button (click)="aboutPage()">LEARN MORE</button>
+<div class="scifi">
+	<div class="titleText">
+		<div>KYLE BYRON</div>
+		<div>3D Modeler</div>
+		<!-- <a href="#baseContent" (click)="slideToggle" class="leanArrow"></a> -->
+	</div>
+	<div id="scifiContainer">
+	<video src="assets/video/scifi.mp4" autoplay loop></video>
+</div>
+</div>
+
+<div id="indexLayout">
+<!--
+	<div id="animatedMenu">
+		<ul>
+			<li>00<span>Home</span></li>
+			<li>01<span>Models</span></li>
+			<li>02<span>About</span></li>
+			<li>03<span>Community</span></li>
+		</ul>
+	</div> -->
+
+<div>
+<section class="viewPort" id="baseContent">
+	<div class="triggerMe"></div>
+	<h2 class="intro">Visualizing worlds in three dimentions</h2>
+  <h3 class="quote">For as long as I can remember I have always been artistic and constructive. Through art and building with Legos I learned much about the way things look and work. With my imagination I am able to visualize a scene from multiple angles and create something new and exciting. Working with 3D is the perfect blend of bringing my two passions together and I wouldn't want to do anything less.</h3>
+<div class="imageRow">
+	<div><div id="a" class="alley"></div><h2>Environments</h2></div>
+	<div><div id="b" class="alley"></div><h2>Characters</h2></div>
+	<div><div id="c" class="alley"></div><h2>Props</h2></div>
+</div>
+
+	<button [routerLink]="['work']">LEARN MORE</button>
 </section>
 
-<section>
-	<h2>Visualizing worlds in 3 dimentions</h2>
-  <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.</h3>
-  <button (click)="aboutPage()">LEARN MORE</button>
+<section class="viewPort">
+	<div class="triggerMe"></div>
+	<div class="rightAligned">
+	<img class="twitchImg" src="assets/img/peterchy.png" />
+	<div class="indexText">
+	<h2 class="intro">Who I Am</h2>
+	<h3 class="quote">As a 3D artist I am looking to partner with the right company to bring my creative imagination to audiences all over the world using such tools as Autodesk Maya, Substance Painter, and Marmoset Toolbag.</h3>
+  <button [routerLink]="['about']">LEARN MORE</button>
+</div>
+</div>
 </section>
 
-<section>
-	<h2>Reimagining Classics</h2>
-  <h3>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</h3>
-  <button (click)="aboutPage()">LEARN MORE</button>
+<section class="viewPort">
+	<div class="triggerMe"></div>
+	<div class="indexArrange">
+	<img class="twitchImg mobile" src="assets/img/twitch.png" />
+	<div class="indexText">
+	<h2 class="intro">Community Engagement</h2>
+  <h3 class="quote">As an active competitor in the Twitch community my finger is on the pulse of gaming. Connecting with other gamers through speed runs for charity, game play streaming, and social chatting has given me a great opportunity to engage in the community I want to design for.</h3>
+  <button><a target="_blank" href="https://www.twitch.tv/megakyle83">LEARN MORE</a></button>
+</div></div>
 </section>
-
-<section>
-	<h2>Community Engagement</h2>
-  <h3>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</h3>
-  <button (click)="aboutPage()">LEARN MORE</button>
-</section>
+</div>
+</div>

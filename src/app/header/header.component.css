@@ -1,4 +1,5 @@
 header {
+  background: rgb(255,255,255);
   width: calc(100% - 40px);
   display: flex;
   justify-content: space-between;
@@ -6,9 +7,9 @@ header {
   padding: 0 20px;
   position: absolute;
   z-index: 9999;
+  top: 0;
 }
 
-#menuIcon,
 .icon {
 	width: 25px;
 	height: 25px;
@@ -20,8 +21,40 @@ header {
 }
 
 #menuIcon {
-  background: blue;
-}
+  width: 30px;
+	height: 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+	cursor: pointer;
+	-webkit-transition: all 0.8s ease;
+  }
+
+  .bars,
+  .bars:before,
+  .bars:after {
+  	height: 2px;
+  	width: 100%;
+  	background: rgb(0,0,0);
+  	border-radius: 20px;
+  }
+
+  .bars:before,
+  .bars:after {
+  	content: '';
+  	position: absolute;
+  }
+
+  .bars:before {
+  	top: 0;
+  }
+
+  .bars:after {
+  	bottom: 0;
+  }
+
+
 
 menu {
   height: 100vh;

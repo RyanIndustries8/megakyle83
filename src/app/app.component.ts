@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import * as $ from 'jquery';
-// import * as $ from 'ScrollMagic';
-// import * as $ from 'gsap';
+import {TweenLite, Power2, TimelineMax, TweenMax} from "gsap";
+import * as ScrollMagic from 'ScrollMagic';
+// import "scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap";
+import "scrollMagic/scrollmagic/minified/plugins/debug.addIndicators.min.js";
+
 
 @Component({
   selector: 'app-root',

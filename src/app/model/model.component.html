@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div class="mainBlock">
+  <a class="return" [routerLink]="['/work']"><div class="arrow"></div> Back to Models</a>
+  <div class="columnFlex" *ngFor="let model of modelwork">
+        <h1 class="modelName">{{ model.label }}</h1>
+    <div class="modelImagery">
+    <iframe [src]='sanitizer.bypassSecurityTrustResourceUrl(model.fab)'
+      frameborder="1" allowvr allowfullscreen mozallowfullscreen="true"
+      webkitallowfullscreen="true" onmousewheel=""></iframe>
+      <img *ngFor="let subpic of model['img']" src={{subpic.render}} />
+    </div>
+    <div class="modelInfo">
+      <p>Geometry:</p><p innerHTML={{model.geometry}}></p>
+      <p>Vertices:</p><p>{{ model.vertices }}</p>
+      <p>Normals:</p><p>{{ model.normals }}</p>
+      <p>Vertex Color:</p><p>{{ model.vertex }}</p>
+      <p>PBR:</p><p>{{ model.pbr }}</p>
+      <p>Rigged:</p><p>{{ model.rigged }}</p>
+    </div>
+  </div>
+</div>

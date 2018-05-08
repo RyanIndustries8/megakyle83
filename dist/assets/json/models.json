@@ -1,0 +1,105 @@
+[
+  {
+    "id": 1,
+    "label": "Metal Man",
+    "sample": "/assets/img/metalman1.png",
+    "fab": "https://sketchfab.com/models/1b3cb7f8a77145bc8616075e9036b025/embed",
+    "img": [
+      {"render": "/assets/img/metalman1.png"},
+      {"render": "/assets/img/metalman2.png"},
+      {"render": "/assets/img/metalman3.png"}
+      ],
+    "geometry": "37.6k Quads<br />308 Triangles<br />75.4k converted to Triangles",
+    "vertices": "37.7k",
+    "normals": "Yes",
+    "vertex": "No",
+    "pbr": "Metalness",
+    "rigged": "No",
+    "uv": "Yes",
+    "textures": "7",
+    "materials": "1"
+  },
+  {
+    "id": 2,
+    "label": "Magrot",
+    "sample": "/assets/img/magrot1.png",
+    "fab": "https://sketchfab.com/models/e20c8ade2f16452ca7f440aa84fc8e33/embed",
+    "img": [
+      {"render": "/assets/img/magrot1.png"},
+      {"render": "/assets/img/magrot2.png"},
+      {"render": "/assets/img/magrot3.png"},
+      {"render": "/assets/img/magrot4.png"}
+      ],
+    "geometry": "24.9k Quads<br />17.7k Triangles<br />67.6k converted to Triangles",
+    "vertices": "34.2k",
+    "normals": "Yes",
+    "vertex": "No",
+    "pbr": "Metalness",
+    "rigged": "No",
+    "uv": "Yes",
+    "textures": "12",
+    "materials": "4"
+  },
+  {
+    "id": 3,
+    "label": "Baseball and Bat",
+    "sample": "/assets/img/ball1.png",
+    "fab": "https://sketchfab.com/models/781c60d3449b46f996a081ae36c20cce/embed",
+    "img": [
+      {"render": "/assets/img/ball1.png"},
+      {"render": "/assets/img/ball2.png"},
+      {"render": "/assets/img/ball3.png"}
+      ],
+    "geometry": "81.2k Triangles",
+    "vertices": "43.7k",
+    "normals": "Yes",
+    "vertex": "No",
+    "pbr": "Metalness",
+    "rigged": "No",
+    "uv": "Yes",
+    "textures": "5",
+    "materials": "1"
+  },
+  {
+    "id": 4,
+    "label": "Garage Tools",
+    "sample": "/assets/img/tools1.png",
+    "fab": "https://sketchfab.com/models/b65c5ceeb019486fb115e0366d4e260e/embed",
+    "img": [
+      {"render": "/assets/img/tools1.png"},
+      {"render": "/assets/img/tools2.png"},
+      {"render": "/assets/img/tools3.png"}
+      ],
+    "geometry": "4.4k Quads<br />34.9k Triangles<br />38 Polygons<br />43.8k converted to Triangles",
+    "vertices": "22.2k",
+    "normals": "Yes",
+    "vertex": "No",
+    "pbr": "Metalness",
+    "rigged": "No",
+    "uv": "Yes",
+    "textures": "5",
+    "materials": "1"
+  },
+  {
+    "id": 5,
+    "label": "Warehouse Scene",
+    "sample": "/assets/img/Container.png",
+    "fab": "https://sketchfab.com/models/b15546f34ac644d4beca827632f32bb1/embed",
+    "img": [
+      {"render": "/assets/img/containerSceen.png"},
+      {"render": "/assets/img/signs.png"},
+      {"render": "/assets/img/Container.png"},
+      {"render": "/assets/img/containerPanels.png"},
+      {"render": "/assets/img/cones.png"}
+      ],
+    "geometry": "332 Triangles",
+    "vertices": "198",
+    "normals": "Yes",
+    "vertex": "No",
+    "pbr": "Metalness",
+    "rigged": "No",
+    "uv": "Yes",
+    "textures": "6",
+    "materials": "1"
+  }
+]

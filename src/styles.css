@@ -35,20 +35,29 @@ h4 {
 	font-size: 12px;
 }
 
+h5 {
+	font-family: inherit;
+	font-size: 22px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+  margin: 25px 0 0px;
+}
+
 p {
 	font-family: inherit;
-	font-size: 16px;
+	font-size: 22px;
 	margin: 0;
 	line-height: 1.6;
 	letter-spacing: 0.5px;
 }
 
 a {
+	color: rgb(0,0,0);
 	text-decoration: none;
 }
 
 a:hover {
-	color: red;
+	color: rgb(33,150,243);
 }
 
 html,
@@ -63,9 +72,41 @@ body {
 	font-family: "light", sans-serif;
 }
 
-canvas {
-	width: 100%;
-	height: 100vh;
-	position: absolute;
-	z-index: 1;
+.position {
+  overflow: hidden;
+}
+
+.rotate {
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		transform: rotate(90deg);
+}
+
+.mainBlock {
+	margin: 0 40px 100px;
+	padding-top: 75px;
+}
+
+.mainBlock h1 {
+	font-size: 54px;
+}
+
+.titleBar {
+	width: 250px;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: baseline;
+	justify-content: space-between;
+}
+
+.basicFlexRow {
+	display: flex;
+	flex-direction: row;
+}
+
+.basicFlexColumn {
+	display: flex;
+	flex-direction: column;
 }

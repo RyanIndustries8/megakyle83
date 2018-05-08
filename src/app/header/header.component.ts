@@ -1,90 +1,64 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { DomSanitizer } from '@angular/platform-browser';
+import 'rxjs/add/operator/toPromise';
+import * as $ from 'jquery';
 
+declare var $:any;
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
+
 export class HeaderComponent implements OnInit {
   title = 'megakyle83';
-socialmedia = [];
+  contactMe: string;
+  socialmedia: any;
+  linkingPgs: object;
 
 
-  constructor(private router: Router) {
-
-    this.socialmedia = [
-      {
-        id: 1,
-        platform: "Twitch",
-        icon: ['./assets/icons/twitch.png']
-      },
-      {
-        id: 2,
-        platform: "ArtStation",
-        icon: ['./assets/icons/artstation.png']
-      },
-      {
-        id: 3,
-        platform: "Deviant Art",
-        icon: ['./assets/icons/deviantart.png']
-      },
-      {
-        id: 4,
-        platform: "Twitter",
-        icon: ['./assets/icons/twitter.png']
-      },
-      {
-        id: 5,
-        platform: "LinkedIn",
-        icon: ['./assets/icons/linkedin.png']
-      },
-      {
-        id: 6,
-        platform: "Facebook",
-        icon: ['./assets/icons/facebook.png']
-      }
-    ]
-
+  constructor(private http: HttpClient, private router: Router, public sanitizer: DomSanitizer ) {
+    this.sanitizer = sanitizer;
   }
 
-  public ngOnInit()
+  public ngOnInit(): void
     {
-      $(document).ready(function() {
-        $(".platform").hide();
+
+      $(document).ready(function(){
         $("menu").hide();
-        $("#menuIcon").on("click", function(){
-          $("menu").slideToggle(500, function() {
-            if($("menu").is(":hidden")){
-              $("html, body").css({
-                  overflow: 'auto',
-                  height: 'auto'
-              })
-            } else {
-              $("html, body").css({
-                  overflow: 'hidden',
-                  height: '100%'
-              })
-            }
-          }
-        }),
+        $("h3").click(function(e) {
+          $("#menuIcon").addClass('rotate');
+          e.stopPropagation();
+        });
 
-          $(".icon").hover(function() {
-              $(this).prev(".platform").slideToggle(300);
-          })
+        $("h3, #menuIcon, .icon").on('click', function(){
+          $("html").toggleClass('position');
+          $("#menuIcon").toggleClass('rotate');
+          $("menu").slideToggle(500);
+        });
+
+        $(".platform").hide();
+        $(".icon").hover(function() {
+            $(this).prev(".platform").slideToggle(300);
+        })
       });
+
+      // this.http.get<any>('assets/json/contactMe.json').subscribe(
+      //   data => {
+      //     this.contactMe = data;
+      //   })
+      //
+      // this.http.get<any>('assets/json/socialMedia.json').subscribe(
+      //   data => {
+      //     this.socialmedia = data;
+      //   })
+
+      this.http.get<any>('assets/json/headerInternalLinks.json').subscribe(
+        data => {
+          this.linkingPgs = data;
+        });
     }
-
-    aboutPage() {
-        this.router.navigate(['about']);
-      }
-
-    workPage() {
-        this.router.navigate(['work']);
-      }
-
-    homePage() {
-        this.router.navigate(['']);
-      }
 
 }

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "platform": "Twitch",
+    "icon": "./assets/icons/twitch.png",
+    "site": "https://www.twitch.tv/megakyle83"
+  },
+  {
+    "id": 2,
+    "platform": "ArtStation",
+    "icon": "./assets/icons/artstation.png",
+    "site": "https://www.artstation.com/megakyle83"
+  },
+  {
+    "id": 3,
+    "platform": "Deviant Art",
+    "icon": "./assets/icons/deviantart.png",
+    "site": "https://megakyle83.deviantart.com/"
+  },
+  {
+    "id": 4,
+    "platform": "Twitter",
+    "icon": "./assets/icons/twitter.png",
+    "site": "https://twitter.com/megakyle83"
+  },
+  {
+    "id": 5,
+    "platform": "LinkedIn",
+    "icon": "./assets/icons/linkedin.png",
+    "site": "https://www.linkedin.com/in/kyle-byron-a027a280"
+  },
+  {
+    "id": 6,
+    "platform": "Facebook",
+    "icon": "./assets/icons/facebook.png",
+    "site": "https://www.facebook.com/profile.php?id=100006316119092"
+  }
+]
