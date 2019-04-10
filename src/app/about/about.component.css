@@ -21,6 +21,7 @@
 
 img.profile {
   height: 400px;
+  box-shadow: 5px 5px 10px -1px rgba(0,0,0,.4);
   margin-left: 40px;
 }
 
