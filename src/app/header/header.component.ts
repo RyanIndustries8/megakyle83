@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 import * as $ from 'jquery';
 
@@ -24,6 +24,13 @@ export class HeaderComponent implements OnInit {
 
 public ngOnInit(): void
     {
+
+      this.router.events.subscribe((evt) => {
+            if (!(evt instanceof NavigationEnd)) {
+                return;
+            }
+            window.scrollTo(0, 0)
+        });
 
       $(document).ready(function(){
         $("menu").hide();
