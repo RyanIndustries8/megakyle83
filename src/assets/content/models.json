@@ -1,0 +1,197 @@
+[
+  {
+    "id": 1,
+    "label": "Metal Man",
+    "sample": "/assets/img/metalman1.png",
+    "fab": "https://skfb.ly/6JtqF",
+    "img": [
+      {"render": "/assets/img/metalman1.png"},
+      {"render": "/assets/img/metalman2.png"},
+      {"render": "/assets/img/metalman3.png"}
+      ],
+    "view": "/assets/icons/vrView.png",
+    "geometry": "37.6k Quads<br />308 Triangles<br />75.4k converted to Triangles",
+    "vertices": "37.7k",
+    "normals": "Yes",
+    "vertex": "No",
+    "pbr": "Metalness",
+    "rigged": "No",
+    "uv": "Yes",
+    "textures": "7",
+    "materials": "1"
+  },
+  {
+    "id": 2,
+    "label": "Magrot",
+    "sample": "/assets/img/magrot1.png",
+    "fab": "https://skfb.ly/6JtqH",
+    "img": [
+      {"render": "/assets/img/magrot1.png"},
+      {"render": "/assets/img/magrot2.png"},
+      {"render": "/assets/img/magrot3.png"},
+      {"render": "/assets/img/magrot4.png"}
+      ],
+    "view": "/assets/icons/vrView.png",
+    "geometry": "24.9k Quads<br />17.7k Triangles<br />67.6k converted to Triangles",
+    "vertices": "34.2k",
+    "normals": "Yes",
+    "vertex": "No",
+    "pbr": "Metalness",
+    "rigged": "No",
+    "uv": "Yes",
+    "textures": "12",
+    "materials": "4"
+  },
+  {
+    "id": 3,
+    "label": "Sci-fi Scene",
+    "sample": "/assets/img/scifi8.jpg",
+    "fab": "https://skfb.ly/6JtqJ",
+    "img": [
+      {"render": "/assets/img/scifi8.jpg"},
+      {"render": "/assets/img/scifi2.jpg"},
+      {"render": "/assets/img/scifi9.jpg"},
+      {"render": "/assets/img/scifi10.jpg"},
+      {"render": "/assets/img/scifi3.jpg"},
+      {"render": "/assets/img/scifi1.jpg"},
+      {"render": "/assets/img/scifi5.jpg"},
+      {"render": "/assets/img/scifi6.jpg"},
+      {"render": "/assets/img/scifi7.jpg"},
+      {"render": "/assets/img/scifi4.jpg"}
+      ],
+    "view": "/assets/icons/picView.png",
+    "geometry": "2.7k Quads<br />232k Triangles<br />8 Polygons<br />5.6k converted to Triangles",
+    "vertices": "3.3k",
+    "normals": "Yes",
+    "vertex": "No",
+    "pbr": "Metalness",
+    "rigged": "No",
+    "uv": "Yes",
+    "textures": "23",
+    "materials": "5"
+  },
+  {
+    "id": 4,
+    "label": "Baseball and Bat",
+    "sample": "/assets/img/ball1.png",
+    "fab": "https://skfb.ly/6JtqW",
+    "img": [
+      {"render": "/assets/img/ball1.png"},
+      {"render": "/assets/img/ball2.png"},
+      {"render": "/assets/img/ball3.png"}
+      ],
+    "view": "/assets/icons/vrView.png",
+    "geometry": "81.2k Triangles",
+    "vertices": "43.7k",
+    "normals": "Yes",
+    "vertex": "No",
+    "pbr": "Metalness",
+    "rigged": "No",
+    "uv": "Yes",
+    "textures": "5",
+    "materials": "1"
+  },
+  {
+    "id": 5,
+    "label": "Garage Tools",
+    "sample": "/assets/img/tools1.png",
+    "fab": "https://skfb.ly/6JtqY",
+    "img": [
+      {"render": "/assets/img/tools1.png"},
+      {"render": "/assets/img/tools2.png"},
+      {"render": "/assets/img/tools3.png"}
+      ],
+    "view": "/assets/icons/vrView.png",
+    "geometry": "4.4k Quads<br />34.9k Triangles<br />38 Polygons<br />43.8k converted to Triangles",
+    "vertices": "22.2k",
+    "normals": "Yes",
+    "vertex": "No",
+    "pbr": "Metalness",
+    "rigged": "No",
+    "uv": "Yes",
+    "textures": "5",
+    "materials": "1"
+  },
+  {
+    "id": 6,
+    "label": "Bowling Alley",
+    "sample": "/assets/img/bowling1.jpg",
+    "fab": "https://skfb.ly/6IREw",
+    "img": [
+      {"render": "/assets/img/bowling1.jpg"},
+      {"render": "/assets/img/bowling2.jpg"},
+      {"render": "/assets/img/bowling3.jpg"}
+      ],
+    "view": "/assets/icons/picView.png",
+    "geometry": "4.2k Quads<br />200k Triangles<br />8 Polygons<br />8.6k converted to Triangles",
+    "vertices": "4.5k",
+    "normals": "Yes",
+    "vertex": "No",
+    "pbr": "Metalness",
+    "rigged": "No",
+    "uv": "Yes",
+    "textures": "15",
+    "materials": "3"
+  },
+  {
+    "id": 7,
+    "label": "Warehouse Scene",
+    "sample": "/assets/img/Container.png",
+    "fab": "https://skfb.ly/6Jtr7",
+    "img": [
+      {"render": "/assets/img/containerSceen.png"},
+      {"render": "/assets/img/signs.png"},
+      {"render": "/assets/img/Container.png"},
+      {"render": "/assets/img/containerPanels.png"},
+      {"render": "/assets/img/cones.png"}
+      ],
+    "view": "/assets/icons/vrView.png",
+    "geometry": "332 Triangles",
+    "vertices": "198",
+    "normals": "Yes",
+    "vertex": "No",
+    "pbr": "Metalness",
+    "rigged": "No",
+    "uv": "Yes",
+    "textures": "6",
+    "materials": "1"
+  },
+  {
+    "id": 8,
+    "label": "Marble Pillar",
+    "sample": "/assets/img/pillar.png",
+    "fab": "https://skfb.ly/6Jtrq",
+    "img": [
+      {"render": "/assets/img/pillar.png"}
+      ],
+    "view": "/assets/icons/vrView.png",
+    "geometry": "3.4k Quads<br />64k Triangles<br />6.9k converted to Triangles",
+    "vertices": "3.5",
+    "normals": "Yes",
+    "vertex": "No",
+    "pbr": "Metalness",
+    "rigged": "No",
+    "uv": "Yes",
+    "textures": "5",
+    "materials": "1"
+  },
+  {
+    "id": 9,
+    "label": "Telegraph",
+    "sample": "/assets/img/pillar.png",
+    "fab": "https://skfb.ly/6Jtrs",
+    "img": [
+      {"render": "/assets/img/pillar.png"}
+      ],
+    "view": "/assets/icons/vrView.png",
+    "geometry": "3.4k Quads<br />64k Triangles<br />6.9k converted to Triangles",
+    "vertices": "3.5",
+    "normals": "Yes",
+    "vertex": "No",
+    "pbr": "Metalness",
+    "rigged": "No",
+    "uv": "Yes",
+    "textures": "5",
+    "materials": "1"
+  }
+]

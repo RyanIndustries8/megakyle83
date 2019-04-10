@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class ModelComponent implements OnInit {
   chosenIndex: any;
   modelwork: any;
+  show_details = false;
 
   constructor( private route: ActivatedRoute, private router: Router, private http: HttpClient, public sanitizer: DomSanitizer ) {
     this.sanitizer = sanitizer;
@@ -23,10 +24,14 @@ export class ModelComponent implements OnInit {
       this.route.params.subscribe(params => {
       this.chosenIndex = params['id'];
 
-      this.http.get<any>('./assets/json/models.json').subscribe(data => {
+      this.http.get<any>('./assets/content/models.json').subscribe(data => {
         this.modelwork = data.filter(d => d['id'] == this.chosenIndex);
       })
     });
 
+  }
+
+  toggle() {
+    this.show_details= !this.show_details;
   }
 }

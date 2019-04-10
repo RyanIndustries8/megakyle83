@@ -1,0 +1,27 @@
+[
+  {
+    "eventtype": "AWARDS",
+    "involve": [
+     {"event": "Full Sail University",
+      "type": "Drawing of the Month",
+      "when": "December 2013",
+      "img": "assets/img/fullSail.png",
+      "link": "https://www.fullsail.edu/degrees/game-art-bachelor"}
+    ]
+  },
+  {
+    "eventtype": "COMMUNITY INVOLVEMENT",
+    "involve": [
+     {"event": "Pixels For Peace",
+       "type": "Speed Run Marathon",
+       "when": "September 2018",
+      "img": "assets/img/pfp3.png",
+      "link": "https://pixelsforpeace.weebly.com/about.html"},
+     {"event": "Game Over, Cancer",
+       "type": "Speed Run Marathon",
+       "when": "April 2018",
+      "img": "assets/img/GOC.png",
+      "link": "https://www.youtube.com/watch?v=rAyRoSHBb5U"}
+    ]
+  }
+]
