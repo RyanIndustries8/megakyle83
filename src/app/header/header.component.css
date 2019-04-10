@@ -5,7 +5,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  position: absolute;
+  position: fixed;
   z-index: 9999;
   top: 0;
 }
@@ -66,7 +66,7 @@ menu {
   align-items: center;
   margin: 0;
   padding: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 99;
 }
@@ -91,13 +91,12 @@ ul li:nth-child(2) {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-bottom: 60px;
-  position: absolute;
-	bottom: 0;
 }
 
 footer {
   display: flex;
+  position: absolute;
+  bottom: 40px;
 }
 
 .social {
@@ -107,23 +106,73 @@ footer {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
+  margin-top: 25px;
+}
+
+.smBlock {
+  width: 325px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+
+a span.platform {
+  visibility: hidden;
+  top: 0px;
+  transition: 1s;
+  opacity: 0;
+  white-space: nowrap;
+}
+
+a:hover span.platform {
+  visibility: visible;
+  top: -20px;
+  transition: 1s;
+  opacity: 1;
 }
 
 .platform {
-  width: 100%;
-	position: relative;
-	top: 10px;
+  width: auto;
+  position: absolute;
 	text-align: center;
+  font-size: 18px;
+  top: -26px;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .icon {
-	position: absolute;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  align-items: center;
+  cursor: pointer;
+	-webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+	position: relative;
 	bottom: 0;
 }
 
 .icon img {
-	width: 100%;
-	height: 100%;
+  -webkit-filter: drop-shadow(0px 0px 1px rgb(253,182,150));
+  filter: drop-shadow(0px 0px 1px rgb(253,182,150));
+	width: 25px;
+	min-height: 25px;
+  opacity: .6;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+
+}
+
+.icon:hover img {
+  opacity: 1;
 }
 
 @media only screen and (min-width: 0) and (max-width: 760px),

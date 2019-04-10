@@ -1,6 +1,9 @@
-import { Component, OnInit, Injectable } from '@angular/core';
-import { Router, RouterModule  } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { DomSanitizer } from '@angular/platform-browser';
 
+declare var jquery:any;
 declare var $:any;
 declare var ScrollMagic: any;
 
@@ -13,14 +16,25 @@ export class HomeComponent implements OnInit {
 
   events: any;
 
-  constructor(private router: Router) {
 
+
+  constructor( private http: HttpClient, private router: Router, public sanitizer: DomSanitizer ) {
+    this.sanitizer = sanitizer;
   }
+
 
 public  ngOnInit() {
 
+
+
     $(document).ready(function() {
 
+      var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+      var isIE = /*@cc_on!@*/false;
+
+      if( isChrome ) {
+      $("#video").replaceWith($('<video id="video" autoplay loop><source src="/assets/video/scifi.webm" type="video/webm"></video>'));
+      }
       //Init Scroll Magic
       var controller = new ScrollMagic.Controller();
         //loop through each img
@@ -32,11 +46,6 @@ public  ngOnInit() {
       })
 
       .setClassToggle(this, 'fade-in')
-      .addIndicators({
-        name: 'fade scene',
-        colorTrigger: 'black',
-        colorStart: '#ff0000'
-      })
 
       .addTo(controller);
 
@@ -51,11 +60,6 @@ public  ngOnInit() {
       })
 
       .setClassToggle(this, 'fade-in')
-      .addIndicators({
-        name: 'title scene',
-        colorTrigger: 'black',
-        colorStart: '#ff0000'
-      })
 
       .addTo(controller);
 
@@ -70,11 +74,6 @@ public  ngOnInit() {
         })
 
       .setClassToggle(this, 'fade-in')
-      .addIndicators({
-        name: 'title scene',
-        colorTrigger: 'black',
-        colorStart: '#ff0000'
-      })
 
       .addTo(controller);
 

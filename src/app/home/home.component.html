@@ -6,7 +6,9 @@
 		<!-- <a href="#baseContent" (click)="slideToggle" class="leanArrow"></a> -->
 	</div>
 	<div id="scifiContainer">
-	<video src="assets/video/scifi.mp4" autoplay loop></video>
+		<video preload="auto" autoplay loop mute id="video">
+      <source src="assets/video/scifi.mp4" type="video/mp4">
+    </video>
 </div>
 </div>
 
@@ -21,7 +23,7 @@
 		</ul>
 	</div> -->
 
-<div>
+<div class="sections">
 <section class="viewPort" id="baseContent">
 	<div class="triggerMe"></div>
 	<h2 class="intro">Visualizing worlds in three dimentions</h2>
@@ -32,7 +34,7 @@
 	<div><div id="c" class="alley"></div><h2>Props</h2></div>
 </div>
 
-	<button [routerLink]="['work']">LEARN MORE</button>
+	<button [routerLink]="['work']">MORE</button>
 </section>
 
 <section class="viewPort">
@@ -42,7 +44,7 @@
 	<div class="indexText">
 	<h2 class="intro">Who I Am</h2>
 	<h3 class="quote">As a 3D artist I am looking to partner with the right company to bring my creative imagination to audiences all over the world using such tools as Autodesk Maya, Substance Painter, and Marmoset Toolbag.</h3>
-  <button [routerLink]="['about']">LEARN MORE</button>
+  <button [routerLink]="['about']">MORE</button>
 </div>
 </div>
 </section>
@@ -54,7 +56,7 @@
 	<div class="indexText">
 	<h2 class="intro">Community Engagement</h2>
   <h3 class="quote">As an active competitor in the Twitch community my finger is on the pulse of gaming. Connecting with other gamers through speed runs for charity, game play streaming, and social chatting has given me a great opportunity to engage in the community I want to design for.</h3>
-  <button><a target="_blank" href="https://www.twitch.tv/megakyle83">LEARN MORE</a></button>
+  <button><a target="_blank" href="https://www.twitch.tv/megakyle83">MORE</a></button>
 </div></div>
 </section>
 </div>

@@ -1,3 +1,11 @@
+.mainBlock {
+  width: calc(100% - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .aboutHero {
   width: 100%;
   height: 450px;
@@ -8,7 +16,7 @@
 .centeredStatement {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-self: center;
 }
 
 img.profile {
@@ -23,11 +31,11 @@ img.CIimg {
 }
 
 .flexRow {
+  max-width: calc(1000px - 80px);
+  width: calc(100% - 80px);
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
-  border-top: 1px solid rgba(0,0,0,.2);
-  margin-top: 40px;
   padding: 40px 40px 0 40px;
 }
 
@@ -40,6 +48,16 @@ img.CIimg {
   margin-bottom: 8px;
 }
 
+.borderSpacing {
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  padding-bottom: 40px;
+}
+
+.heroSpacing {
+  width: 100%;
+  height: 100%;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -47,24 +65,64 @@ ul {
   line-height: 1.6;
 }
 
-.basicFlexRow div {
-  margin-right: 50px;
+.basicFlexRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
-.basicFlexColumn div {
+.basicFlexColumn ul li {
+  margin-bottom: 15px;
+}
+
+.basicFlexColumn {
   margin-bottom: 20px;
-  margin-right: 60px;
 }
 
-@media screen and (max-width: 5270px) {
+.eventTitle {
+  font-size: 22px;
+}
+
+.expGrid {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-row-gap: 10px;
+  grid-column-gap: 20px;
+}
+
+.skillsLayout {
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 1;
+}
+
+.recLayout {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 527px) {
   .aboutHero {
     background: url(/assets/img/MetalManSide.png) right -80px top no-repeat;
     background-size: cover;
+  }
+
+  .basicFlexRow {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .recLayout {
+    flex-direction: column-reverse;
   }
 }
 
 @media screen and (max-width: 750px) {
   .flexRow {
+    width: 100%;
     flex-flow: column wrap;
     padding: 0;
     padding-top: 40px;
@@ -78,5 +136,14 @@ ul {
   img.profile {
     margin-left: 0;
     margin-bottom: 30px;
+  }
+
+  .skillsLayout {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .skillsLayout div {
+    margin-bottom: 20px;
   }
 }

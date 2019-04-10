@@ -13,15 +13,19 @@
       <h3><a [routerLink]="(page.link)">{{page.pgTitle}}</a></h3>
     </li>
   </ul>
-  <div class="contactCont" *ngFor="let contact of contactMe">
-    <h2>{{contact.title}}</h2>
-    <p>{{contact.email}}</p>
-    <p>{{contact.phone}}</p>
     <footer>
-    <div class="social" *ngFor="let social of socialmedia">
-      <span class="platform">{{social.platform}}</span>
-      <a class="icon" target="_blank" href={{social.site}}><img [src]="social.icon" /></a>
+      <div class="contactCont" *ngFor="let contact of contactMe">
+        <h2>{{contact.title}}</h2>
+        <p>{{contact.email}}</p>
+        <p>{{contact.phone}}</p>
+    <div class="social">
+      <div class="smBlock">
+        <a class="icon" *ngFor="let social of socialmedia" target="_blank" href={{social.site}}>
+          <img [src]="social.icon" />
+          <span class="platform">{{social.platform}}</span>
+        </a>
+      </div>
     </div>
-  </footer>
-</div>
+  </div>
+</footer>
 </menu>

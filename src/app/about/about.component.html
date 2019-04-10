@@ -1,42 +1,47 @@
 <app-header></app-header>
 <div class="mainBlock">
-
   <div class="titleBar">
     <h1>{{title}}</h1>
   </div>
-  <div class="aboutHero"></div>
-  <div class="centeredStatement">
-    <div class="flexRow mobile">
-    <div *ngFor="let new of aboutContent">
-    <p *ngFor="let subitem of new['statement']">{{subitem.para}}</p>
+  <div class="borderSpacing heroSpacing">
+    <div class="aboutHero"></div>
   </div>
-  <img *ngFor="let new of aboutContent" class="profile" src={{new.profile}} />
-</div>
+  <div class="centeredStatement borderSpacing">
+    <div class="flexRow mobile">
+      <div *ngFor="let new of aboutContent">
+      <p *ngFor="let subitem of new['statement']">{{subitem.para}}</p>
+      </div>
+      <img *ngFor="let new of aboutContent" class="profile" src={{new.profile}} />
+    </div>
   </div>
     <div class="flexRow">
-
-<div class="basicFlexColumn">
-          <div *ngFor="let doc of aboutRec">
-          <ul>
-            <li><h5>{{doc.event}}</h5></li>
-            <li class="basicFlexColumn">
-              <a target="_blank" href={{doc.link}}><img class="CIimg" src={{doc.img}} /></a>
-                <span>{{doc.info}}</span>
-            </li>
-          </ul>
+      <div class="basicFlexRow">
+        <div class="skillsLayout">
+          <div *ngFor="let doc of aboutSkill">
+            <ul>
+              <li><h5>{{doc.title}}</h5></li>
+              <ul *ngFor="let subitem of doc['skills']">
+                <li>{{subitem.prog}}</li>
+                <li><a target="_blank" href={{subitem.link}}>{{subitem.type}}</a></li>
+              </ul>
+            </ul>
+          </div>
         </div>
-</div>
-<div class="basicFlexRow">
-        <div *ngFor="let doc of aboutSkill" >
-        <ul>
-          <li><h5>{{doc.title}}</h5></li>
-        <ul *ngFor="let subitem of doc['skills']">
-          <li>{{subitem.prog}}</li>
-          <li><a target="_blank" href={{subitem.link}}>{{subitem.type}}</a></li>
-        </ul>
-      </ul>
-    </div>
-</div>
-
+        <div class="recLayout">
+          <div *ngFor="let doc of aboutRec">
+            <ul>
+              <li><h5>{{doc.eventtype}}</h5></li>
+                <ul *ngFor="let subrec of doc['involve']">
+                  <li class="basicFlexColumn">
+                    <a target="_blank" href={{subrec.link}}><img class="CIimg" src={{subrec.img}} /></a>
+                    <span class="eventTitle">{{subrec.event}}</span>
+                    <span>{{subrec.type}}</span>
+                    <span>{{subrec.when}}</span>
+                  </li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
 </div>

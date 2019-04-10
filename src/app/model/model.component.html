@@ -1,21 +1,42 @@
 <app-header></app-header>
 <div class="mainBlock">
-  <a class="return" [routerLink]="['/work']"><div class="arrow"></div> Back to Models</a>
+
   <div class="columnFlex" *ngFor="let model of modelwork">
+      <a class="return" [routerLink]="['/work']"><div class="arrow"></div> Back to Models</a>
+      <button class="desktopBtn"><a target="_blank" href={{model.fab}}>View 3D at Sketchfab</a></button>
         <h1 class="modelName">{{ model.label }}</h1>
-    <div class="modelImagery">
-    <iframe [src]='sanitizer.bypassSecurityTrustResourceUrl(model.fab)'
-      frameborder="1" allowvr allowfullscreen mozallowfullscreen="true"
-      webkitallowfullscreen="true" onmousewheel=""></iframe>
-      <img *ngFor="let subpic of model['img']" src={{subpic.render}} />
-    </div>
-    <div class="modelInfo">
-      <p>Geometry:</p><p innerHTML={{model.geometry}}></p>
-      <p>Vertices:</p><p>{{ model.vertices }}</p>
-      <p>Normals:</p><p>{{ model.normals }}</p>
-      <p>Vertex Color:</p><p>{{ model.vertex }}</p>
-      <p>PBR:</p><p>{{ model.pbr }}</p>
-      <p>Rigged:</p><p>{{ model.rigged }}</p>
-    </div>
+        <div class="mobileBtn">
+          <button><a target="_blank" href={{model.fab}}>View 3D at Sketchfab</a></button>
+
+        </div>
+        <div></div>
+        <a class="viewDetailsBtn" (click)="toggle()">View Details</a>
+        <div class="modelInfo hiding" *ngIf="show_details">
+          <div class="modelInfo inner">
+            <p>Geometry:</p><p innerHTML={{model.geometry}}></p>
+            <p>Vertices:</p><p>{{ model.vertices }}</p>
+          </div>
+          <div class="modelInfo inner">
+            <p>Normals:</p><p>{{ model.normals }}</p>
+            <p>Vertex Color:</p><p>{{ model.vertex }}</p>
+            <p>PBR:</p><p>{{ model.pbr }}</p>
+            <p>Rigged:</p><p>{{ model.rigged }}</p>
+          </div>
+        </div>
+        <div class="modelInfo wideScreen">
+          <div class="modelInfo inner">
+            <p>Geometry:</p><p innerHTML={{model.geometry}}></p>
+            <p>Vertices:</p><p>{{ model.vertices }}</p>
+          </div>
+          <div class="modelInfo inner">
+            <p>Normals:</p><p>{{ model.normals }}</p>
+            <p>Vertex Color:</p><p>{{ model.vertex }}</p>
+            <p>PBR:</p><p>{{ model.pbr }}</p>
+            <p>Rigged:</p><p>{{ model.rigged }}</p>
+          </div>
+        </div>
+  </div>
+  <div class="modelImagery" *ngFor="let model of modelwork">
+    <img *ngFor="let subpic of model['img']" src={{subpic.render}} />
   </div>
 </div>

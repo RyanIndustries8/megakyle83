@@ -15,24 +15,27 @@ export class AboutComponent implements OnInit {
   aboutSkill: any;
   aboutRec: any;
 
-  constructor( private http: HttpClient,private router: Router, public sanitizer: DomSanitizer ) {
+  constructor( private http: HttpClient, private router: Router, public sanitizer: DomSanitizer ) {
     this.sanitizer = sanitizer;
+
+
   }
 
   ngOnInit(): void {
-       this.http.get<any>('./assets/json/aboutSkill.json').subscribe(
+       this.http.get<any>('./assets/content/aboutSkill.json').subscribe(
          data => {
            this.aboutSkill = data;
          })
 
-     this.http.get<any>('./assets/json/text.json').subscribe(
+     this.http.get<any>('./assets/content/text.json').subscribe(
        data => {
          this.aboutContent = data;
        })
 
-     this.http.get<any>('./assets/json/aboutRec.json').subscribe(
+     this.http.get<any>('./assets/content/aboutRec.json').subscribe(
        data => {
          this.aboutRec = data;
        })
+
   }
 }

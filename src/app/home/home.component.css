@@ -20,6 +20,13 @@
 	bottom: 100px;
 }
 
+.sections {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .titleText div:first-child {
 	font-size: 64px;
 	letter-spacing: 1px;
@@ -118,23 +125,20 @@ video.fillWidth {
 
 section {
 	width: calc(100% - 80px);
+	max-width: calc(1240px - 80px);
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	padding: 20px 40px;
-	/* margin-left: 100px; */
-}
-
-section:nth-child(odd) {
-	background-color: rgb(255,255,255);
 }
 
 section h3 {
   text-align: center;
 	padding: 0 40px 50px;
 	width: 75%;
+	font-size: 20px;
 }
 
 .alley {
@@ -144,7 +148,7 @@ section h3 {
 }
 
 #a {
-	background: url("/assets/img/View1.jpg");
+	background: url("/assets/img/bowling1.jpg");
 	background-size: cover;
 }
 
@@ -156,63 +160,6 @@ section h3 {
 #c {
 	background: url("/assets/img/tools1.png");
 	background-size: cover;
-}
-
-button {
-	border-radius: 1px;
-	position: relative;
-	height: 55px;
-	width: auto;
-	padding: 0 20px;
-	border: none;
-	cursor: pointer;
-	outline: unset;
-}
-
-button:before,
-button:after {
-  content: '';
-	width: 25%;
-  height: 50%;
-  position: absolute;
-}
-
-button:before {
-  left: 0;
-  bottom: 0;
-  border-bottom: 1px solid black;
-	border-left: 1px solid black;
-}
-
-button:after {
-  top: 0;
-  right: 0;
-  border-top: 1px solid black;
-	border-right: 1px solid black;
-}
-
-button:hover:before {
-  left: 0;
-  top: 0;
-	bottom: unset;
-	border-top: 1px solid black;
-  border-bottom: 0px solid black !important;
-	border-left: 1px solid black;
-}
-
-button:hover:after {
-	top: unset;
-	bottom: 0;
-  right: 0;
-	border-bottom: 1px solid black;
-  border-top: 0px solid black !important;
-	border-right: 1px solid black;
-}
-
-button a,
-button a:hover,
-button a:active {
-	color: rgb(0,0,0);
 }
 
 .indexArrange {

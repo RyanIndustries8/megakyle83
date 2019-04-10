@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 import * as $ from 'jquery';
 import {TweenLite, Power2, TimelineMax, TweenMax} from "gsap";
 import * as ScrollMagic from 'ScrollMagic';
@@ -14,5 +16,16 @@ import "scrollMagic/scrollmagic/minified/plugins/debug.addIndicators.min.js";
 export class AppComponent {
   title = 'app';
 
-  public ngOnInit(){}
+  constructor(private router: Router) {
+
+     // router.events
+     //   .filter(event => event instanceof NavigationEnd)
+     //   .subscribe((event: NavigationEnd) => {
+     //     window.scroll(0, 0);
+     //   });
+
+   }
+
+  public ngOnInit(){
+  }
 }

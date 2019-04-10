@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router, ActivatedRoute } from '@angular/router';
+import * as $ from 'jquery';
 
 declare var $:any;
 
@@ -24,18 +25,10 @@ export class WorkComponent implements OnInit {
   }
 
  ngOnInit(): void {
-    this.http.get<any>('./assets/json/models.json').subscribe(
+    this.http.get<any>('./assets/content/models.json').subscribe(
       data => {
         this.modelwork = data;
       })
-
-    $(document).ready(function() {
-      $(".tag").hide();
-      $(".grid-item").hover(function() {
-        $(this).children(".tag").stop(true, true).slideToggle(500);
-         return false;
-      })
-    });
 
 }
 }
